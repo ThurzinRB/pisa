@@ -4,12 +4,14 @@ For every change you make in the URDFs inside src/pisa/description for some reas
 
 ```bash
 colcon build --symlink-install
+source install/setup.zsh
 ```
 
 Then, run the launch publisher:
 
 ```bash
 ros2 launch pisa rsp.launch.py
+ros2 run joint_state_publisher_gui joint_state_publisher_gui
  ```
 
 Right! now you're publishing the urdfs in a ros topic, to view it just run rviz
